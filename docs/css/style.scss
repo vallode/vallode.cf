@@ -118,6 +118,10 @@ a {
         text-align: left;
         justify-content: center;
         height: 100%;
+
+        a {
+            color: $background;
+        }
     }
 }
 
