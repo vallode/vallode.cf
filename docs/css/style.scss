@@ -4,7 +4,8 @@
 
 $background: #282828;
 $foreground: #f0f0f0;
-$highlight: #03A9F4;
+$highlight: #4e91d2;
+$spacer: 0.5rem;
 
 html,
 body {
@@ -184,8 +185,8 @@ a {
 .content {
     background-color: $foreground;
 
-    border-bottom: 3px $highlight solid;
-    border-top: 3px $highlight solid;
+    border-bottom: $spacer/2 $highlight solid;
+    border-top: $spacer/2 $highlight solid;
     border-radius: 2px;
 
     margin: 20px 0;
@@ -274,7 +275,7 @@ a {
 
         p {
             float: right;
-            margin-bottom: 1rem;
+            margin-bottom: $spacer;
             padding: 0 1rem 0 1rem;
             text-align: center;
             border-radius: 2px;
@@ -304,6 +305,7 @@ a {
 /* Footer */
 
 footer {
+    text-align: center;
     p {
         color: $foreground;
         margin: 0.5em;
