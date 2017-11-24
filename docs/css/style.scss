@@ -70,7 +70,7 @@ a {
 }
 
 .highlighter-rouge {
-    color: $background;
+    color: $foreground;
     background-color: #d0d0d0;
     padding: 0.1rem 0.5rem;
     margin: 0 0.1rem;
@@ -293,7 +293,7 @@ header {
         p {
             float: right;
             margin-bottom: $spacer;
-            padding: 0 1rem 0 1rem;
+            padding: 0.2rem 1rem 0.2rem 1rem;
             text-align: center;
             border-radius: 2px;
         }
