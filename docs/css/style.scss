@@ -79,6 +79,7 @@ a {
     border-radius: 2px;
 
     .highlight {
+        color: $foreground;
         &:hover {
             color: $foreground;
             background-color: #d0d0d0;
