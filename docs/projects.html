@@ -9,13 +9,13 @@ projects: [
     ['Image Birb', 'https://vallode.github.io/papes/', 'Full-stack'],
 ]
 ---
-<h2>My finest creations</h2>
+<h2>My creations</h2>
 <p class='subtitle'>Check out my <strong><a href='https://codepen.io/Vallode/'>codepen</a></strong> for some more of my
     work</p>
 <div class='projects'>
     {% for entry in page.projects %}
     <div class='entry'>
-        <p><a href='{{entry[1]}}'>{{entry[0]}}</a></p>
+        <a href='{{entry[1]}}'>{{entry[0]}}</a>
 
         <p class="{{entry[2]}}">{{entry[2]}}</p>
     </div>

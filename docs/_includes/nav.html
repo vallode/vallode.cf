@@ -1,6 +1,31 @@
-<ul class='navigation' id='{{page.title}}'>
-    <li><a href='/projects/' class='highlight'>Projects</a></li>
-    <li><a href='/notes/' class='highlight'>Notes</a></li>
-    <li><a href='/' class='highlight'>About</a></li>
-</ul>
-</div>
+    <ul class='navigation' id='{{page.title}}'>
+        <li><a href='/projects/' class='highlight'>Projects</a></li>
+        <li><a href='/notes/' class='highlight'>Notes</a></li>
+        <li><a href='/' class='highlight'>About</a></li>
+    </ul>
+    <input type='checkbox' id='menu'>
+    <label for='menu'>
+        <div class="burger">
+            <div class='left-bracket'>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class='right-bracket'>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+        <div class='mobile-nav'>
+            <nav>
+                <ul class='navigation mobile' id='{{page.title}}'>
+                    <li><a href='/projects/' class='highlight'>Projects</a></li>
+                    <li><a href='/notes/' class='highlight'>Notes</a></li>
+                    <li><a href='/' class='highlight'>About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </label>
+</header>

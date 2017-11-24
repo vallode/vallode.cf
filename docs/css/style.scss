@@ -1,11 +1,11 @@
+$background: #f0f0f0;
+$foreground: #282828;
+$highlight: #4e91d2;
+$spacer: 0.5rem;
+
 * {
     box-sizing: border-box;
 }
-
-$background: #282828;
-$foreground: #f0f0f0;
-$highlight: #4e91d2;
-$spacer: 0.5rem;
 
 html,
 body {
@@ -17,42 +17,50 @@ body {
 }
 
 body {
-    min-height: 100%;
-
     background-color: $background;
-    color: $background;
+    color: $foreground;
 
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 18px;
 }
 
 /* Typography */
 
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1;
+    color: $highlight;
     letter-spacing: 0.125rem;
     margin: 0;
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
 }
 
-h2 + p {
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h1 + p,
+h2 + p,
+h3 + p {
     padding-top: 0;
     margin-top: 0;
 }
 
-p {
-    font-size: 1rem;
-}
-
 a {
     color: $highlight;
+    font-weight: 500;
     text-decoration: none;
-
-    font-family: 'Roboto Condensed', sans-serif;
 
     transition: color 0.25s ease;
 
@@ -78,14 +86,14 @@ a {
     }
 }
 
-.language-html {
+[class*='language'] {
     margin-bottom: 20px;
 }
 
+/* Wrapper */
+
 .wrapper {
     height: 100%;
-    margin: 0 auto;
-
     display: flex;
     flex-direction: column;
 }
@@ -100,30 +108,27 @@ a {
 
 /* Header */
 
-.header {
+header {
     position: relative;
-    height: 95px;
-    text-align: left;
-    background-color: $foreground;
-
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 1);
-
-    p {
-        font-size: 1.3rem;
-        margin: 0;
-    }
+    justify-content: center;
+    flex-basis: 100px;
+    max-height: 100px;
+    padding: 1vh 0 1vh 0;
 
     .title {
         float: left;
         display: flex;
         padding-left: 10px;
         flex-direction: column;
-        text-align: left;
         justify-content: center;
         height: 100%;
 
         a {
-            color: $background;
+            color: $foreground;
+        }
+
+        p {
+            margin: 0;
         }
     }
 }
@@ -131,14 +136,23 @@ a {
 .social {
     float: left;
     display: flex;
-    max-height: 100%;
-    height: 100%;
-    justify-content: center;
+    justify-content: space-around;
+    align-content: space-around;
     width: 100px;
+    height: 100%;
     flex-wrap: wrap;
     flex-direction: column;
     text-align: center;
     padding: 0 10px 0 10px;
+
+    a {
+        width: 32px;
+        height: 32px;
+    }
+
+    @media screen and (max-width: 920px){
+        display: none;
+    }
 }
 
 /* Nav */
@@ -161,6 +175,7 @@ a {
     }
 
     a {
+        color: $foreground;
         font-size: 1.6em;
 
         padding: 0 10px 0 10px;
@@ -185,16 +200,7 @@ a {
 /* Content */
 
 .content {
-    background-color: $foreground;
-
-    border-bottom: $spacer/2 $highlight solid;
-    border-top: $spacer/2 $highlight solid;
-    border-radius: 2px;
-
-    margin: 20px 0;
     padding: 20px;
-
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 1);
 
     p {
         font-size: 1.2em;
@@ -218,7 +224,22 @@ a {
     list-style: none;
     padding: 0 0 10px 0;
 
+    a {
+        color: $foreground;
+        
+        &:hover {
+            color: $highlight;
+        }
+
+        p {
+            padding: 0;
+            margin-bottom: -10px;
+            font-size: 1.2rem;
+        }
+    }
+
     p {
+        font-size: 1.2rem;
         padding: 0 0 0 1vh;
     }
     
@@ -230,7 +251,6 @@ a {
         bottom: 0;
         width: 100%;
         height: 2px;
-
     }
 }
 
@@ -240,7 +260,7 @@ a {
     .date {
         display: inline-block;
         font-size: 0.7em;
-        color: lighten($background, 20%);
+        color: lighten($foreground, 20%);
     }
 }
 
@@ -256,22 +276,17 @@ a {
         width: 100%;
         position: relative;
         margin-bottom: 1.2rem;
-        flex:1;
         display: flex;
         text-align: center;
         transition: all 0.25s ease;
 
-        p:first-child {
+        a:first-child {
             flex: 1;
-            font-size: 1.2rem;
+            color: #282828;
+            font-size: 1.3rem;
             text-align: left;
-
-            a {
-                color: black;
-
-                &:hover {
-                    color: $highlight;
-                }
+            &:hover {
+                color: $highlight;
             }
         }
 
@@ -284,10 +299,16 @@ a {
         }
 
         .Front-end {
+            line-height: 1;
+            font-weight: bold;
+            color: $background;
             background-color: #43A047;
         }
 
         .Full-stack {
+            line-height: 1;
+            font-weight: bold;
+            color: $background;
             background-color: #e53935;
         }
 
@@ -304,13 +325,142 @@ a {
     }
 }
 
+/* Burger Nav */
+
+#menu {
+    display: none;
+}
+
+#menu:checked + label .mobile-nav {
+    height: 100%;
+    nav {
+        bottom: 0;
+        height: 15vh;
+    }
+}
+
+#menu:checked + label .burger {
+    bottom: -64px;
+}
+
+.mobile-nav {
+    z-index: 1000;
+    width: 100%;
+    height: 0;
+    position: fixed;
+
+    nav {
+        display: block;
+        transition: all 0.25s ease;
+        width: 100%;
+        height: 0;
+        background-color: $foreground;
+        position: fixed;
+        bottom: -64px;
+        left: 0;
+    }
+
+    .mobile {
+        float: left;
+        flex-direction: row;
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        li {
+            float: left;
+        }
+
+        li a {
+            font-size: 1.4rem;
+            color: $background;
+        }
+    }
+}
+
+.burger {
+    display: none;
+    z-index: 1000;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    position: fixed;
+
+    right: 0;
+    bottom: 0;
+    margin: 16px;
+    background-color: $highlight;
+
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.25s ease;
+
+    box-shadow: 0 3px 6px rgba(0,0,0, 0.16), 0 3px 6px rgba(0,0,0, 0.23);
+    p {
+        height: 100%;
+        margin: 0;
+        font-size: 2rem;
+    }
+
+    .left-bracket {
+        position: absolute;
+        height: 32px;
+        left: 18px;
+        div:nth-child(1){
+            float: left;
+            height: 32px;
+            width: 3px;
+            background-color: $foreground;
+        }
+        div:nth-child(2){
+            height: 3px;
+            width: 10px;
+            background-color: $foreground;
+        }
+        div:nth-child(3){
+            position: absolute;
+            height: 3px;
+            width: 10px;
+            background-color: $foreground;
+            bottom: 0;
+        }
+    }
+
+    .right-bracket {
+        position: absolute;
+        height: 32px;
+        right: 18px;
+        div:nth-child(1){
+            float: right;
+            height: 32px;
+            width: 3px;
+            background-color: $foreground;
+        }
+        div:nth-child(2){
+            height: 3px;
+            width: 10px;
+            background-color: $foreground;
+        }
+        div:nth-child(3){
+            float: left;
+            position: absolute;
+            height: 3px;
+            width: 10px;
+            background-color: $foreground;
+            bottom: 0;
+        }
+    }
+}
+
 /* Footer */
 
 footer {
-    text-align: center;
+    display: flex;
+    justify-content: center;
     p {
         color: $foreground;
-        margin: 0.5em;
+        margin: 0.5rem;
         opacity: 0.5;
         transition: all 0.25s ease;
 
@@ -350,49 +500,33 @@ footer {
     }
 }
 
-/* Tablet */
-
 @media screen and (max-width: 800px) {
-    .content-wrapper {
-        max-width: 90vw;
-        width: 90vw;
-    }
-
-    .navigation {
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .navigation li {
-        margin: 0;
-    }
-
-    .social {
-        display: none;
-    }
-}
-
-/* Mobile */
-
-@media screen and (max-width: 450px) {
     .content-wrapper {
         max-width: 100vw;
         width: 100vw;
     }
 
-    .profile {
+    header .title h1 {
+        font-size: 2.5rem;
+    }
+
+    .navigation {
         display: none;
     }
 
-    html,
-    body {
-        font-size: 12px;
+    .burger {
+        display: flex;
+    }
+
+    .mobile {
+        display: block;
     }
 }
 
-@media screen and (max-width: 350px) {
-    html,
-    body {
-        font-size: 10px;
+@media screen and (max-width: 550px) {
+    .content .profile {
+        float: none;
+        display: flex;
+        margin: 20px auto;
     }
 }

@@ -2,15 +2,14 @@
 layout: default
 title: Notes
 ---
-<h2>Explore project notes and blog posts</h2>
+<h2>Project notes</h2>
 <br>
 {% for post in site.posts %}
 <li class='post'>
     <a class='postTitle' href="{{ post.url }}">
-        {{ post.title }}
+        <p>{{ post.title }}</p>
         <span class='date'>{{ post.date | date: '%B %d, %Y' }}</span>
     </a>
-    <br>
     {{ post.excerpt }}
 </li>
 {% endfor %}
