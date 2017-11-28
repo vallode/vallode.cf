@@ -124,6 +124,8 @@ hr {
         align-items: center;
 
         margin: 0 auto;
+        top: 0;
+        left: 0;
 
         &::before {
             content: '';
