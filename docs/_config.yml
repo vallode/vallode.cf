@@ -5,8 +5,8 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
-# Exclude
-exclude: [css/style.css.map, css/style.scss]
+exclude:
+    ['_posts']
 
 # SEO
 title: Mariusz Zarzycki
