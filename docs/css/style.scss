@@ -124,8 +124,6 @@ hr {
         align-items: center;
 
         margin: 0 auto;
-        top: 0;
-        left: 0;
 
         &::before {
             content: '';
@@ -136,6 +134,8 @@ hr {
             width: 100%;
             background-color: $highlight;
             border-radius: 100%;
+            top: 0;
+            left: 0;
         }
 
         img {
