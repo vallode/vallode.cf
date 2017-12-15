@@ -174,12 +174,16 @@ hr {
     }
 }
 
-.skills {
+.row {
     width: 100%;
 
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+
+    h2 {
+        width: 100%;
+    }
 
     div {
         flex: 1;
@@ -193,6 +197,22 @@ hr {
 
     img {
         opacity: 0.7;
+    }
+}
+
+.projects {
+    img {
+        opacity: 1;
+        width: 100%;
+
+        border-radius: 3px;
+
+        transition: all 0.25s ease;
+        box-shadow: darken($background, 30%) 2px 5px 5px 0px;
+
+        &:hover {
+            box-shadow: darken($background, 40%) 3px 6px 6px 0px;
+        }
     }
 }
 
