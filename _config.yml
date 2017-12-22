@@ -6,7 +6,7 @@ plugins:
   - jekyll-seo-tag
 
 exclude:
-    ['_posts']
+    ['_posts', '_drafts']
 
 # SEO
 title: Mariusz Zarzycki

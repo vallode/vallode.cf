@@ -1,6 +1,7 @@
 # Jekyll files
-/docs/_site
-/docs/_drafts
+_posts
+_site
+_drafts
 
 # Webstorm
 /.idea
@@ -10,8 +11,4 @@
 /package-lock.json
 
 #SCSS
-style.min.css
 style.css.map
-
-2017-11-23-this-website-again.md
-2017-11-23-image-birb.md
