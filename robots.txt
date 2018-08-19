@@ -1,6 +1,0 @@
-# I love bots
-User-agent: *
-Allow: *
-Crawl-delay: 5
-
-Sitemap: http://vallode.cf/sitemap.xml

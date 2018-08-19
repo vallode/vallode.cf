@@ -1,3 +1,4 @@
-# Vallode.cf
+# vallode.com
 
-A personal website created to host my blog/project details
+Landing page site for contact info etc.  
+Really, that is it. I promise.
