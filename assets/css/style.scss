@@ -1,5 +1,11 @@
 @charset "UTF-8";
 
+@font-face {
+    font-family: "Barlow";
+    src: url("../fonts/Barlow-Regular.ttf") format("opentype");
+
+}
+
 /* SASS Variables */
 
 $black: #383838;
@@ -53,7 +59,7 @@ body {
     justify-content: center;
     text-align: center;
 
-    font-family: 'Barlow', sans-serif;
+    font-family: Barlow, sans-serif;
     @include fluid-type($min-font, $max-font, $min-screen, $max-screen);
 
     background-color: $white;
@@ -87,6 +93,10 @@ p {
 
 a {
     text-decoration: none;
+}
+
+b {
+    color: $blue;
 }
 
 /* Layout */
