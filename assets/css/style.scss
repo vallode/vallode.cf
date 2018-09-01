@@ -2,8 +2,8 @@
 
 @font-face {
     font-family: "Barlow";
+    font-display: fallback;
     src: url("../fonts/Barlow-Regular.ttf") format("opentype");
-
 }
 
 /* SASS Variables */
@@ -54,10 +54,6 @@ body {
 
 body {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
 
     font-family: Barlow, sans-serif;
     @include fluid-type($min-font, $max-font, $min-screen, $max-screen);
@@ -66,10 +62,6 @@ body {
     color: $black;
 
     box-sizing: border-box;
-
-    overflow: hidden;
-
-    animation: title-fade-in 1.75s ease forwards;
 }
 
 *, *::before, *::after {
@@ -139,15 +131,6 @@ b {
 }
 
 /* Keyframes */
-
-@keyframes title-fade-in {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
 
 @keyframes icons-flow-left {
     from {
