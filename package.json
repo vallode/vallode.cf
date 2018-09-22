@@ -1,0 +1,32 @@
+{
+  "name": "vallode.com",
+  "version": "0.0.1",
+  "description": "Landing page site for contact info etc.   Really, that is it. I promise.",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "critical": "^1.3.4",
+    "gulp-clean-css": "^3.10.0",
+    "gulp": "^3.9.1",
+    "gulp-git": "^2.8.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-image-optimization": "^0.1.3",
+    "imagemin-jpegtran": "^5.0.2",
+    "postcss-uncss": "^0.16.1",
+    "uncss": "^0.16.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vallode/vallode.com.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vallode/vallode.com/issues"
+  },
+  "homepage": "https://github.com/vallode/vallode.com#readme"
+}

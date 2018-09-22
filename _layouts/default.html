@@ -4,6 +4,10 @@ image: /images/favicon.png
 <html lang='en'>
 {% include head.html %}
 <body>
-    {{ content }}
+    {% include header.html %}
+    <main>
+        {{ content }}
+    </main>
+    {% include footer.html %}
 </body>
 </html>

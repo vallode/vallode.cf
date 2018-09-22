@@ -1,22 +1,5 @@
 @charset "UTF-8";
 
-@font-face {
-    font-family: "Barlow";
-    font-display: fallback;
-    src: url("../fonts/Barlow-Regular.ttf") format("opentype");
-}
-
-/* SASS Variables */
-
-$black: #383838;
-$white: #f0f0f0;
-$blue: #4E91D2;
-
-$min-font: 12px;
-$max-font: 18px;
-$min-screen: 320px;
-$max-screen: 1280px;
-
 /* Fluid */
 
 @function strip-unit($value) {
@@ -124,10 +107,6 @@ b {
     border-radius: 2px;
     background-color: $blue;
     margin: 0.5rem;
-
-    transform: translateX(125vw);
-    will-change: transform;
-    animation: icons-flow-left 3s calc(1.75s + 2s) ease forwards;
 
     a {
         font-size: 1.999em;

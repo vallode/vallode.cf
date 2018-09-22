@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+
+    min-height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    @include fluid-type($min-font, $max-font, $min-screen, $max-screen);
+    font-size: 1em;
+    line-height: 1.65em;
+    font-family: sans-serif;
+
+    background-color: $white;
+    background-image: url("/assets/img/pattern.jpg");
+    color: $black;
+
+    box-sizing: border-box;
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+
+p {
+    margin-bottom: 1.3em;
+}
+
+a {
+    font-weight: 600;
+    color: inherit;
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+    font-weight: inherit;
+    line-height: 1.2;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 2.441em;
+}
+
+h2 {
+    font-size: 1.953em;
+}
+
+h3 {
+    font-size: 1.563em;
+}
+
+h4 {
+    font-size: 1.25em;
+}
+
+small, .font_small {
+    font-size: 0.8em;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+}

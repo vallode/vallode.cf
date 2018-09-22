@@ -1,0 +1,22 @@
+button {
+    padding: 1em 2em;
+
+    color: $white;
+    background-color: $blue;
+
+    border-radius: 2px;
+
+    font-weight: bolder;
+    text-transform: uppercase;
+
+    transition: all 0.12s ease, clip-path 0.12s ease;
+
+    cursor: pointer;
+
+    clip-path: polygon(50% 0%, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 50%, 0 0);
+
+    &:hover {
+        padding: 1em 3em;
+        clip-path: polygon(50% 0%, 100% 0, 95% 50%, 100% 100%, 0 100%, 5% 50%, 0 0);
+    }
+}

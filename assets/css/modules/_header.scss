@@ -1,0 +1,113 @@
+header {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    position: relative;
+
+    text-align: center;
+    height: 8vh;
+    width: 100%;
+
+    @include padding;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+
+    background-color: $white_light;
+
+    h1 {
+        color: $blue;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        flex: 1;
+
+        li {
+            padding: 0 1em;
+
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+
+    .nav-mobile {
+        display: none;
+
+        .line {
+            width: 24px;
+            height: 4px;
+            border-radius: 4px;
+            background: $blue;
+
+            margin: 4px 0.5em;
+            transition: all 0.125s ease;
+        }
+
+        .active {
+            .line:first-child {
+                transform: rotate(-45deg) translate(0, 5px);
+            }
+
+            .line:nth-of-type(2) {
+                display: none;
+            }
+
+            .line {
+                transform: rotate(45deg) translate(0, -6px);
+            }
+        }
+    }
+
+    #mobile_nav {
+        display: none;
+        justify-content: center;
+        position: absolute;
+
+        top: -100%;
+        left: 0;
+        z-index: 1;
+
+        width: 100%;
+
+        background: $blue;
+        color: $white;
+
+        transition: all 0.125s ease;
+
+        li  {
+            margin: 0.5em 0;
+            a {
+                font-size: 1.5em;
+                text-decoration: none;
+            }
+        }
+
+
+        &.active {
+            top: 100%;
+        }
+    }
+
+    @include for-mobile {
+        position: fixed;
+        z-index: 1000;
+
+        h1 {
+            text-align: left;
+            flex: 1;
+        }
+
+        .nav {
+            display: none;
+        }
+
+        .nav-mobile,
+        #mobile_nav {
+            display: flex;
+        }
+    }
+}

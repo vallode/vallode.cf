@@ -1,2 +1,78 @@
-@font-face{font-family:"Barlow";font-display:fallback;src:url("../fonts/Barlow-Regular.ttf") format("opentype")}html,body{margin:0;padding:0;height:100%}body{display:flex;font-family:Barlow, sans-serif;background-color:#f0f0f0;color:#383838;box-sizing:border-box}body{font-size:12px}@media screen and (min-width: 320px){body{font-size:calc(12px + 6 * ((100vw - 320px) / 960))}}@media screen and (min-width: 1280px){body{font-size:18px}}*,*::before,*::after{box-sizing:inherit}h1{margin:0.5rem;font-size:3.998em;font-weight:inherit;line-height:1;color:#4E91D2}p{margin-bottom:1.3em}a{text-decoration:none}b{color:#4E91D2}.landing{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;height:100%;width:100%;overflow:hidden}.subtitle{position:relative;margin:0.5rem;transform:translateY(100vh);will-change:transform;animation:subtitle-flow 2s 1.75s ease-in-out forwards}.social{position:relative;display:flex;flex-flow:wrap;border-radius:2px;background-color:#4E91D2;margin:0.5rem;transform:translateX(125vw);will-change:transform;animation:icons-flow-left 3s calc(1.75s + 2s) ease forwards}.social a{font-size:1.999em;padding:0.5rem 1em;color:#f0f0f0;transition:all 0.25s ease;flex:1}.social a:hover{background-color:#f0f0f0;color:#4E91D2}@keyframes icons-flow-left{from{transform:translateX(125vw)}to{transform:translateX(0)}}@keyframes subtitle-flow{from{transform:translateY(100vh)}to{transform:translateY(0)}}
-/*# sourceMappingURL=style.css.map */
+/*
+Error: Undefined variable: "$min-font".
+        on line 42 of style.scss, in `fluid-type'
+        from line 42 of style.scss
+
+37: 
+38: body {
+39:     display: flex;
+40: 
+41:     font-family: Barlow, sans-serif;
+42:     @include fluid-type($min-font, $max-font, $min-screen, $max-screen);
+43: 
+44:     background-color: $white;
+45:     color: $black;
+46: 
+47:     box-sizing: border-box;
+
+Backtrace:
+style.scss:42:in `fluid-type'
+style.scss:42
+/var/lib/gems/2.3.0/gems/sass-3.5.6/lib/sass/script/tree/variable.rb:49:in `_perform'
+/var/lib/gems/2.3.0/gems/sass-3.5.6/lib/sass/script/tree/node.rb:50:in `perform'
+/var/lib/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:358:in `block (2 levels) in visit_mixin'
+/var/lib/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:358:in `map'
+/var/lib/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:358:in `block in visit_mixin'
+/var/lib/gems/2.3.0/gems/sass-3.5.6/lib/sass/stack.rb:98:in `block in with_mixin'
+/var/lib/gems/2.3.0/gems/sass-3.5.6/lib/sass/stack.rb:135:in `with_frame'
+/var/lib/gems/2.3.0/gems/sass-3.5.6/lib/sass/stack.rb:98:in `with_mixin'
+/var/lib/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:350:in `visit_mixin'
+/var/lib/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:36:in `visit'
+/var/lib/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/var/lib/gems/2.3.0/gems/sass-3.5.6/lib/sass/stack.rb:79:in `block in with_base'
+/var/lib/gems/2.3.0/gems/sass-3.5.6/lib/sass/stack.rb:135:in `with_frame'
+/var/lib/gems/2.3.0/gems/sass-3.5.6/lib/sass/stack.rb:79:in `with_base'
+/var/lib/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/var/lib/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+/var/lib/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:444:in `map'
+/var/lib/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+/var/lib/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/var/lib/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
+/var/lib/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:36:in `visit'
+/var/lib/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/var/lib/gems/2.3.0/gems/sass-3.5.6/lib/sass/stack.rb:79:in `block in with_base'
+/var/lib/gems/2.3.0/gems/sass-3.5.6/lib/sass/stack.rb:135:in `with_frame'
+/var/lib/gems/2.3.0/gems/sass-3.5.6/lib/sass/stack.rb:79:in `with_base'
+/var/lib/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/var/lib/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/var/lib/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:52:in `map'
+/var/lib/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/var/lib/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+/var/lib/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/var/lib/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+/var/lib/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/var/lib/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+/var/lib/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:36:in `visit'
+/var/lib/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:161:in `visit'
+/var/lib/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:10:in `visit'
+/var/lib/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/root_node.rb:36:in `css_tree'
+/var/lib/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/var/lib/gems/2.3.0/gems/sass-3.5.6/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/var/lib/gems/2.3.0/gems/sass-3.5.6/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/var/lib/gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+/var/lib/gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/var/lib/gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:209:in `each'
+/var/lib/gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/var/lib/gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin.rb:82:in `update_stylesheets'
+/var/lib/gems/2.3.0/gems/sass-3.5.6/lib/sass/exec/sass_scss.rb:340:in `watch_or_update'
+/var/lib/gems/2.3.0/gems/sass-3.5.6/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/var/lib/gems/2.3.0/gems/sass-3.5.6/lib/sass/exec/base.rb:52:in `parse'
+/var/lib/gems/2.3.0/gems/sass-3.5.6/lib/sass/exec/base.rb:19:in `parse!'
+/var/lib/gems/2.3.0/gems/sass-3.5.6/bin/scss:13:in `<top (required)>'
+/usr/local/bin/scss:23:in `load'
+/usr/local/bin/scss:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$min-font\".\A         on line 42 of style.scss, in `fluid-type'\A         from line 42 of style.scss\A \A 37: \A 38: body {\A 39:     display: flex;\A 40: \A 41:     font-family: Barlow, sans-serif;\A 42:     @include fluid-type($min-font, $max-font, $min-screen, $max-screen);\A 43: \A 44:     background-color: $white;\A 45:     color: $black;\A 46: \A 47:     box-sizing: border-box;"; }

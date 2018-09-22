@@ -1,0 +1,60 @@
+footer {
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 0 -14px 28px transparentize(darken($white, 8%), 0.2);
+}
+
+.widgets {
+    background-color: $blue_dark;
+    color: $white;
+    flex: 1;
+
+    @include padding;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+
+    .widget {
+        max-width: 400px;
+
+        .title {
+            font-weight: bolder;
+            margin-bottom: 0.8em;
+        }
+
+        .social-list {
+            display: flex;
+            flex-flow: row wrap;
+
+            li {
+                min-width: 40%;
+                flex: 1;
+
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+.stripe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-self: flex-end;
+    text-align: center;
+
+    background: $blue_light;
+
+    @include padding;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+
+    p {
+        color: $white;
+        font-size: 1.1em;
+        margin: 0;
+    }
+}

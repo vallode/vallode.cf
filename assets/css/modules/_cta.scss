@@ -1,0 +1,47 @@
+section.cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    padding-top: 16vh;
+    padding-bottom: 10vh;
+    @include padding;
+
+    overflow: hidden;
+
+    .button {
+        margin: 5vh 0;
+    }
+
+    .title {
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: '';
+
+            height: 4px;
+            width: 32px;
+
+            left: -64px;
+            top: 50%;
+
+            background-color: $blue;
+        }
+
+        &::after {
+            position: absolute;
+            content: '';
+
+            height: 4px;
+            width: 32px;
+
+            right: -64px;
+            top: 50%;
+
+            background-color: $blue;
+        }
+    }
+}
