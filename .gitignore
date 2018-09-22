@@ -12,4 +12,5 @@ _drafts
 /package-lock.json
 
 #SCSS
+.sass-cache
 style.css.map
