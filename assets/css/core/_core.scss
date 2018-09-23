@@ -15,7 +15,7 @@ body {
     @include fluid-type($min-font, $max-font, $min-screen, $max-screen);
     font-size: 1em;
     line-height: 1.65em;
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
 
     background-color: $white;
     background-image: url("/assets/img/pattern.jpg");

@@ -12,8 +12,6 @@ header {
     padding-top: 0.5em;
     padding-bottom: 0.5em;
 
-    background-color: $white_light;
-
     h1 {
         color: $blue;
     }
@@ -93,6 +91,7 @@ header {
     }
 
     @include for-mobile {
+        background: $white_light;
         position: fixed;
         z-index: 1000;
 

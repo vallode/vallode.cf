@@ -17,7 +17,6 @@
 }
 
 @mixin padding {
-
     @include desktop-up {
         padding-right: 10vw;
         padding-left: 10vw;
@@ -32,6 +31,10 @@
         padding-right: 2vw;
         padding-left: 2vw;
     }
+}
+
+@mixin box-shadow {
+    box-shadow: 0 -14px 28px transparentize(darken($white, 8%), 0.2), 0 14px 28px transparentize(darken($white, 8%), 0.2);
 }
 
 @function strip-unit($value) {

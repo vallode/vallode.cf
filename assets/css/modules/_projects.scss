@@ -11,7 +11,7 @@ section.projects {
     color: $white;
     background: url("/assets/img/background.jpg");
 
-    box-shadow: 0 -14px 28px transparentize(darken($white, 8%), 0.2), 0 14px 28px transparentize(darken($white, 8%), 0.2);
+    @include box-shadow;
 
     > .title {
         padding: 0 0 5vh 0;
@@ -50,10 +50,6 @@ section.projects {
                 h6 {
                     font-weight: bolder;
                     font-size: 1.3em;
-                }
-
-                p {
-
                 }
             }
 
