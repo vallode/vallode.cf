@@ -2,6 +2,7 @@
 _posts
 _site
 _drafts
+.jekyll-metadata
 
 # Webstorm
 /.idea
@@ -11,6 +12,9 @@ _drafts
 /node_modules
 /package-lock.json
 
-#SCSS
+# SCSS
 .sass-cache
 style.css.map
+
+# Other
+/assets/img-in
