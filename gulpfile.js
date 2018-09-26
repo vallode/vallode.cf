@@ -67,7 +67,7 @@ gulp.task('jpgs', function (cb) {
 gulp.task('html', function () {
     const htmlmin = require('gulp-htmlmin');
 
-    return gulp.src('./*.html')
+    return gulp.src('./_site/*.html')
         .pipe(htmlmin({ collapseWhitespace: true}))
         .pipe(gulp.dest('./_site'));
 });
