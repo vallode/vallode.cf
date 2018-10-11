@@ -48,20 +48,6 @@ gulp.task('uncss', function () {
         .pipe(gulp.dest('/assets/css/main.css'))
 });
 
-gulp.task('jpgs', function (cb) {
-    const imageop = require('gulp-image-optimization');
-    const imageminJpegtran = require('imagemin-jpegtran');
-
-    gulp.src('./assets/img-in/*.jpg')
-        .pipe(imageop({
-            optimizationLevel: 7,
-            progressive: true,
-            interlaced: true,
-            use: [imageminJpegtran()]
-        }))
-        .pipe(gulp.dest('./assets/img')).on('end', cb).on('error', cb);
-});
-
 gulp.task('html', function () {
     const htmlmin = require('gulp-htmlmin');
 
@@ -70,4 +56,4 @@ gulp.task('html', function () {
         .pipe(gulp.dest('./_site'));
 });
 
-gulp.task('init', [ 'jekyll', 'uncss', 'clean', 'critical', 'html', 'jpgs']);
+gulp.task('init', [ 'jekyll', 'uncss', 'clean', 'critical', 'html']);
