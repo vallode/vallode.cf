@@ -7,16 +7,20 @@
     "critical": "^1.3.4",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.10.0",
-    "gulp-git": "^2.8.0",
     "gulp-htmlmin": "^5.0.1",
     "gulp-image-optimization": "^0.1.3",
     "gulp-postcss": "^8.0.0",
+    "imagemin-gifsicle": "^5.2.0",
     "imagemin-jpegtran": "^5.0.2",
     "package.json": "^2.0.1",
     "postcss-uncss": "^0.16.1",
     "uncss": "^0.16.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "child_process": "^1.0.2",
+    "fancy-log": "^1.3.2",
+    "gifsicle": "^3.0.4"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

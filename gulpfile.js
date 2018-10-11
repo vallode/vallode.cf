@@ -1,11 +1,9 @@
 const gulp = require('gulp');
 
-gulp.task('push', function () {
-    const git = require('gulp-git');
+gulp.task('jekyll', function () {
+    const child = require('child_process');
 
-    git.push('origin', 'master', function (err) {
-        if (err) throw err;
-    });
+    const jekyll = child.spawn('jekyll', ['build']);
 });
 
 gulp.task('clean', function () {
@@ -72,4 +70,4 @@ gulp.task('html', function () {
         .pipe(gulp.dest('./_site'));
 });
 
-gulp.task('css', ['uncss', 'clean', 'critical', 'html']);
+gulp.task('init', [ 'jekyll', 'uncss', 'clean', 'critical', 'html', 'jpgs']);

@@ -10,7 +10,11 @@ exclude:
     '_drafts',
     'node_modules',
     'package-lock.json',
-    'gulpfile.js']
+    'gulpfile.js',
+    'package.json',
+    'README.md',
+    'LICENSE',
+    '/img-in']
 
 # SEO
 title: Mariusz Zarzycki
