@@ -1,19 +1,31 @@
 footer {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-
-    text-align: center;
 
     background: $blue_light;
     color: $white;
 
     @include box-shadow;
-    padding: 1vh 0;
+    @include padding;
+
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+    .col {
+        flex: 1;
+    }
+
+    .social {
+        font-size: 2em;
+        text-align: right;
+
+        .icon {
+            text-decoration: none;
+            margin: 0 5px;
+        }
+    }
 
     p {
-        font-size: 1.1em;
         margin: 0;
     }
 }

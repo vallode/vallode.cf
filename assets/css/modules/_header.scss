@@ -1,35 +1,22 @@
 header {
     display: flex;
-    flex-flow: row wrap;
     align-items: center;
     position: relative;
 
-    text-align: center;
     height: 8vh;
     width: 100%;
 
     @include padding;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
 
     h1 {
+        font-family: 'Poppins', sans-serif;
         color: $blue;
     }
 
-    .nav {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
+    nav {
+        text-align: right;
 
         flex: 1;
-
-        li {
-            padding: 0 1em;
-
-            a {
-                text-decoration: none;
-            }
-        }
     }
 
     .nav-mobile {

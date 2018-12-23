@@ -17,9 +17,9 @@
 }
 
 @mixin padding {
-    @include desktop-up {
-        padding-right: 10vw;
-        padding-left: 10vw;
+    @include for-mobile {
+        padding-right: 2vw;
+        padding-left: 2vw;
     }
 
     @include tablet-up {
@@ -27,9 +27,9 @@
         padding-left: 6vw;
     }
 
-    @include for-mobile {
-        padding-right: 2vw;
-        padding-left: 2vw;
+    @include desktop-up {
+        padding-right: 20vw;
+        padding-left: 20vw;
     }
 }
 
