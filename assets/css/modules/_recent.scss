@@ -24,6 +24,7 @@ section.recent {
         .page {
             position: relative;
             width: 100%;
+            max-width: 450px;
             height: 225px;
 
             background-color: $blue;
