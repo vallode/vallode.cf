@@ -8,13 +8,27 @@ header {
 
     @include padding;
 
+    background-color: $blue;
+    color: $white;
+    z-index: 1000;
+
     h1 {
         font-family: 'Poppins', sans-serif;
-        color: $blue;
+        color: $white;
     }
 
     nav {
         text-align: right;
+
+        a {
+            margin: 0 1em;
+            text-decoration: none;
+            text-transform: lowercase;
+        }
+
+        a:last-child {
+            margin-right: 0;
+        }
 
         flex: 1;
     }
@@ -64,7 +78,7 @@ header {
         transition: all 0.125s ease;
 
         li  {
-            margin: 0.5em 0;
+            margin: 0.5em 1em;
             a {
                 font-size: 1.5em;
                 text-decoration: none;
@@ -78,16 +92,11 @@ header {
     }
 
     @include for-mobile {
-        background: $white_light;
-        position: fixed;
-        z-index: 1000;
-
         h1 {
-            text-align: left;
             flex: 1;
         }
 
-        .nav {
+        nav {
             display: none;
         }
 

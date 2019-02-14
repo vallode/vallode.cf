@@ -8,6 +8,7 @@ plugins:
 exclude:
     ['.backup',
     '_drafts',
+    '.idea/',
     'node_modules',
     'package-lock.json',
     'gulpfile.js',
@@ -18,7 +19,7 @@ exclude:
 
 # SEO
 title: Mariusz Zarzycki
-description: Contact me to discuss any web-related matters, let's get to work.
+description: Always open to a chat about the web, or anything else. Let's get working
 url: https://vallode.com/
 author: Mariusz Zarzycki
 twitter:

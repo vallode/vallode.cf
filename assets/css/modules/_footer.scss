@@ -1,6 +1,10 @@
 footer {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+
+    text-align: center;
 
     background: $blue_light;
     color: $white;
@@ -8,45 +12,82 @@ footer {
     @include box-shadow;
     @include padding;
 
-    padding-top: 1em;
-    padding-bottom: 1em;
+    padding-top: 5vh;
+    padding-bottom: 8vh;
 
-    .col {
-        flex: 1;
+    box-shadow: 0 -10px 20px rgba(0,0,0,0.19);
+
+    .info {
+        margin: 5vh 0 0 0;
+
+        h3 {
+            font-weight: bold;
+        }
+
+        p {
+            color: $white;
+        }
     }
 
     .social {
+        position: relative;
         font-size: 2em;
-        text-align: right;
 
-        .icon {
+        a {
             text-decoration: none;
-            margin: 0 5px;
+            font-weight: normal;
+        }
+
+        i {
+            position: relative;
+
+            width: 56px;
+            margin: 0 10px;
+            padding: 10px;
+        }
+
+        a:nth-of-type(1):hover ~ .arrow {
+            left: 42px;
+            opacity: 1;
+
+            transform: rotate(50deg);
+        }
+
+        a:nth-of-type(2):hover ~ .arrow {
+            left: 64px;
+            opacity: 1;
+
+            transform: rotate(120deg);
+        }
+
+        a:nth-of-type(3):hover ~ .arrow {
+            left: 210px;
+            opacity: 1;
+
+            transform: rotate(50deg);
+        }
+
+        .arrow {
+            content: '';
+            position: absolute;
+
+            width: 42px;
+            height: 42px;
+
+            bottom: -42px;
+            left: -42px;
+
+            transform: rotate(130deg);
+
+            transition: all 0.2s ease;
+
+            opacity: 0;
+            background-color: $white;
+            clip-path: polygon(30% 25%, 30% 44%, 75% 44%, 75% 55%, 30% 55%, 30% 75%, 0 50%);
         }
     }
 
     p {
-        margin: 0;
-    }
-}
-
-.stripe {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    justify-self: flex-end;
-    text-align: center;
-
-    background: $blue_light;
-
-    @include padding;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-
-    p {
-        color: $white;
-        font-size: 1.1em;
         margin: 0;
     }
 }

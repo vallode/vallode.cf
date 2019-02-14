@@ -1,0 +1,91 @@
+section.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+    @include padding;
+    padding-top: 15vh;
+
+    background-color: $blue;
+    color: $white;
+
+    .title {
+        font-weight: bold;
+        margin: 0 0 1em 0;
+    }
+
+    p {
+        max-width: 800px;
+    }
+}
+
+div.info-overlay {
+    display: flex;
+    flex-flow: row wrap;
+
+    margin-top: 5vh;
+    margin-bottom: -25vh;
+
+    max-width: 1200px;
+
+    background-color: $white;
+    color: $black;
+
+    border-radius: 12px;
+
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19);
+
+    div.step {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        padding: 5vh 2rem 2vh 2rem;
+
+        width: 30%;
+        min-width: 250px;
+
+        margin: 0;
+        flex: 1;
+
+        ul {
+            min-height: 90px;
+        }
+
+        ul.button {
+            display: flex;
+            flex-direction: column;
+
+            justify-content: center;
+        }
+
+        b {
+            color: $blue;
+            font-weight: bold;
+        }
+
+        a {
+            font-weight: normal;
+        }
+
+        p {
+            flex: 1;
+        }
+
+        h3 {
+            margin: 16px 0;
+        }
+
+        .far {
+            color: $blue;
+        }
+
+    }
+
+    div.step:nth-of-type(2) {
+        border-left: solid 1px darken($white, 5%);
+        border-right: solid 1px darken($white, 5%);
+    }
+}

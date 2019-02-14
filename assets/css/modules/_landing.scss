@@ -1,67 +1,8 @@
 section.landing {
     display: flex;
 
-    padding-top: 10vh;
-    padding-bottom: 10vh;
+    margin: 20vh 0;
     @include padding;
-
-    .title {
-        position: relative;
-        text-align: left;
-        margin-bottom: 1.3em;
-        max-width: 800px;
-
-        span {
-            position: relative;
-
-            &::after {
-                position: absolute;
-                content: '';
-
-                width: 90%;
-                height: 0.1em;
-                bottom: 0;
-
-                left: 50%;
-                transform: translateX(-50%);
-
-                border-radius: 2px;
-                background: $blue;
-            }
-        }
-    }
-
-    b {
-        font-weight: bolder;
-    }
-
-    p {
-        text-align: left;
-        max-width: 800px;
-        color: $black_light;
-    }
-
-    .social {
-        position: relative;
-        display: flex;
-        flex-flow: wrap;
-        margin: 0.5rem;
-
-        a {
-            font-size: 1.999em;
-            padding: 0.5rem 1em;
-            color: $white;
-            background-color: $blue;
-            transition: all 0.25s ease;
-            text-decoration: none;
-            flex: 1;
-
-            &:hover {
-                background-color: transparent;
-                color: $blue;
-            }
-        }
-    }
 
     @include for-mobile {
         padding-top: 8vh;
@@ -69,4 +10,42 @@ section.landing {
 
         margin-top: 8vh;
     }
+}
+
+div.step {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    margin: 0 75px;
+
+    h3 {
+        margin: 12px 0;
+    }
+
+    .fas {
+        color: $blue;
+    }
+
+    @include for-mobile {
+        margin: 0;
+    }
+
+    @include tablet-up {
+        margin: 0 25px;
+    }
+
+    @include desktop-up {
+        margin: 0 75px;
+    }
+}
+
+div.step-arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: $blue;
 }
